@@ -1,0 +1,25 @@
+<%= provide(:title,@user.name) %>
+
+<div class='user-inline'>
+    <%= gravatar_for @user %>
+    <%= @user.name %> 
+    <%= render 'users/action', user: @user %>
+</div>
+
+ <% if current_user == @user %>
+    <article style="margin-top: 20px;">
+      <h3>Pending invitations:</h3>
+      <%= render @pending_invitations %>
+    </article>
+  <% else %>
+    <article style="margin-top: 20px;">
+      <h3>Mutual friends:</h3>
+      <%= render @mutual_friends %>
+    </article>
+  <% end %>
+  <article class="timeline">
+    <h3>Recent posts:</h3>
+    <ul class="posts">
+      <%= render @posts %>
+    </ul>
+  </article>
