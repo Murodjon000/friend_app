@@ -1,0 +1,15 @@
+
+<div class='user-info-box'>
+  <div class=' p-4'>
+    <span class='user-image'>
+    <%= link_to gravatar_for(current_user, size: 50), current_user%>
+    </span>
+    <span class='text-center '><%= link_to current_user.name, current_user, class:'user-name' %></span>
+  </div>
+  <div class='post-num p-4'>
+    <span>
+     Number of posts <b class='ml-2'><%= current_user.posts.count %></b>
+    </span>
+    <span >Number of friends <b class='ml-2'> <%= current_user.friends.count %> </b></span>
+  </div>
+</div>
