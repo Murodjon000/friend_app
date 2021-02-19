@@ -1,0 +1,74 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.user-info-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 8px;
+    .user-image {
+        margin:0 auto;
+    }
+
+    .user-name {
+        color: black;
+        font-size: 20px;
+        font-weight: 500;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.my-4 {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.box-shadow {
+    box-shadow: 4px 9px 29px -10px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 4px 9px 29px -10px rgba(0,0,0,0.6);
+    -moz-box-shadow: 4px 9px 29px -10px rgba(0,0,0,0.6);
+}
+
+.user__card {
+    background-color: white;
+    padding: 16px;
+    border-radius: 10px;
+}
+
+.post-num {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ul {
+    list-style: none;
+}
+
+.mt-8 {
+    margin-top: 32px;
+}
+
+.mr-3 {
+    margin-right: 12px;
+}
+
+.user-show {
+    display: flex;
+    align-items: center;
+    
+    p {
+        margin-left: 10px;
+        font-size: 20px;
+    }
+}
