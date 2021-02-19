@@ -1,4 +1,4 @@
-<div class='row p-4'>
+<div class='row p-4 mb-3'>
   <div class='post-info'>
     <div>
       <%= link_to gravatar_for(post.user,size:40), user_path(post.user), class: 'rounded-circle' %>
@@ -17,13 +17,12 @@
 
   <div class='mb-3'>
     <%= render partial: 'comments/comments', collection: post.comments %>
-    <div class='comment-box'>
+    <div class='comment-form'>
     <%= form_for(post.comments.new, url: post_comments_path(post)) do |f| %>
       <%= f.text_area :content, class: 'form-control', placeholder: 'Add Comment' %>
       <%= f.submit 'Comment', class: 'btn btn-primary' %>
     <% end %>
     </div>
   </div>
-  <hr>
 
 </div>
