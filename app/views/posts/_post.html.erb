@@ -1,24 +1,29 @@
-<div class='row'>
+<div class='row p-4'>
   <div class='post-info'>
     <div>
-      <%= link_to post.user.name, user_path(post.user) %>
+      <%= link_to gravatar_for(post.user,size:40), user_path(post.user), class: 'rounded-circle' %>
+      <%= link_to post.user.name, user_path(post.user), class: 'post-user' %>
     </div>
     <div>
-      <span> <%= post.created_at.strftime("%Y/%m/%d") %> </span>
+      <span class='text-black'> Posted <%= time_ago_in_words(post.created_at) %> ago. </span>
       <%= like_dislike(post) %>
     </div>
   </div>
 
-  <p>
+  <p class='post-content'>
     <%= post.content %>
+    <hr>
   </p>
 
-  <div class=''>
+  <div class='mb-3'>
     <%= render partial: 'comments/comments', collection: post.comments %>
+    <div class='comment-box'>
     <%= form_for(post.comments.new, url: post_comments_path(post)) do |f| %>
-      <%= f.text_area :content, class: 'form-control', placeholder: 'Add new Comment' %>
+      <%= f.text_area :content, class: 'form-control', placeholder: 'Add Comment' %>
       <%= f.submit 'Comment', class: 'btn btn-primary' %>
     <% end %>
+    </div>
   </div>
+  <hr>
 
 </div>
