@@ -1,0 +1,5 @@
+<h1 class='user-inline user-info-box'>
+    <%= gravatar_for(current_user.friend) %>
+    <%= user.name %>
+    <%= render 'users/action', user: user %>
+</h1>
