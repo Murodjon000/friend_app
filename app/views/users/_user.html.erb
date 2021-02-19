@@ -1,6 +1,11 @@
-
-    <h1 class='user-inline'>
-      <%= gravatar_for user %>
-      <%= user.name %>
-      <%= render 'users/action', user: user %>
-    </h1>
+<div class='list-group'>
+    <div class='user-inline list-group-item list-group-item-action'>
+        <div>
+          <%= gravatar_for(user,size: 40) %>
+          <%= user.name %>
+        </div>
+        <div class='flex'>
+          <%= render 'users/action', user: user %>
+        </div>
+    </div>
+</div>
