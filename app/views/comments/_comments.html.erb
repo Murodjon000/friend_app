@@ -1,9 +1,23 @@
-<div>
-  <p>
-    <%= comment.user.name %>
-    <%= comment.content %>
-  </p>
-  <span>
-    <%= comment.created_at.strftime("%Y/%m/%d") %>
-  </span>
+<div class=''>
+  <div class='p-4'>
+    <div class=''>
+      <div class='comment__box'>
+        <%= link_to gravatar_for(comments.user,size:40), user_path(comments.user), class: 'rounded-circle' %>
+        <div class='comment__text'>
+          <div class='comment-info'>
+              <p class='text-black'><%= comments.user.name %></p>
+              <span class='time-post'>Commented <%= time_ago_in_words(comments.created_at) %> ago</span>
+          </div>
+          <div>
+            <p>
+             <%= comments.content %>
+             </p>
+          </div>
+        </div>
+      </div>
+       
+    </div>
+ 
+    <hr>
+  </div>
 </div>
