@@ -1,10 +1,10 @@
 <div class='list-group'>
-    <div class='user-inline list-group-item list-group-item-action'>
+    <div class='flex align-center justify-beetwen list-group-item list-group-item-action'>
         <div>
-          <%= gravatar_for(user,size: 40) %>
-          <%= user.name %>
+          <%= link_to gravatar_for(user,size: 40), user %>
+          <%= link_to user.name, user %>
         </div>
-        <div class='flex'>
+        <div class='flex justify-beetwen align-center'>
           <%= render 'users/action', user: user %>
         </div>
     </div>
