@@ -2,9 +2,9 @@
 @import "bootstrap";
 
 @mixin box_sizing {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
   
 $gray-light:#777;
@@ -116,11 +116,6 @@ input {
   display: inline-flex;
 }
 
-.post-info {
-  display: flex;
-  justify-content: space-between;
-}
-
 .post-user {
   font-size: 18px;
   color: black;
@@ -136,24 +131,18 @@ input {
   margin-top: 15px;
 }
 
-.user-inline {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .header__box {
   background-color: white;
-  border-bottom: 1px solid #CFCECB;
+  border-bottom: 1px solid #ddd;
 }
 
 .border {
-  color: 1px solid #DEDDDA;
+  color: 1px solid #ddd;
 }
 
 .post-form{
   background-color: white;
-  border: #DEDDDA;
+  border: #ddd;
   border-radius: 12px;
   padding: 16px;
 }
