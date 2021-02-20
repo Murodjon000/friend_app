@@ -1,13 +1,17 @@
 <%= provide(:title,@user.name) %>
 
 <div class='list-group'>
-  <div class='list-group-item list-group-item-action user-show'>
-    <%= gravatar_for @user %>
+  <div class='list-group-item list-group-item-action flex align-center justify-beetwen'>
+    <div class='flex align-center'>
+    <%= link_to gravatar_for(@user), @user %>
     <p class='user-name'>
-    <%= @user.name %>
+      <%= link_to @user.name, @user, class: 'font-lg ml-2' %>
     </p>
-    <%= render 'users/action', user: @user %>
     </div>
+    <div>
+      <%= render 'users/action', user: @user %>
+    </div>
+  </div>
 </div>
 
   <article class="timeline">
