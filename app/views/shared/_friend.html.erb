@@ -1,5 +1,18 @@
-<h1 class='user-inline user-info-box'>
-    <%= gravatar_for(current_user.friend) %>
-    <%= user.name %>
-    <%= render 'users/action', user: user %>
-</h1>
+
+<% if @users.include?(current_user) %>
+<% users = @users.reject { |user| user == current_user } %>
+ <% users.each do |user| %>
+<div class='list-group'>
+    <div class='flex align-center justify-beetwen list-group-item list-group-item-action'>
+        <div>
+          <%= gravatar_for(user,size: 40) %>
+          <%= user.name %>
+        </div>
+        <div class='flex justify-beetwen align-center'>
+          <%= render 'users/action', user: user %>
+        </div>
+     
+    </div>
+</div>
+<% end %>
+<% end %>
