@@ -1,5 +1,5 @@
 <div class='row p-4 mb-3'>
-  <div class='post-info'>
+  <div class='flex justify-beetwen'>
     <div>
       <%= link_to gravatar_for(post.user,size:40), user_path(post.user), class: 'rounded-circle' %>
       <%= link_to post.user.name, user_path(post.user), class: 'post-user' %>
