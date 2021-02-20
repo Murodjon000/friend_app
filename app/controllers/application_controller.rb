@@ -1,13 +1,9 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
-  def users
-    @users = User.all
+  def user
     @user = User.find_by(params[:user_id])
-
-    if current_user
-      @users.reject { |user| user == current_user }
-    end
+    @users = User.all.order('created_at DESC')
   end
 
 
