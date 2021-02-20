@@ -2,9 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .user-info-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     margin: 0 auto;
     background-color: white;
     border-radius: 8px;
@@ -40,17 +37,6 @@
     border-radius: 10px;
 }
 
-.post-num {
-    display: flex;
-    flex-direction: column;
-}
-
-.flex {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
 ul {
     list-style: none;
 }
@@ -64,9 +50,6 @@ ul {
 }
 
 .user-show {
-    display: flex;
-    align-items: center;
-    
     p {
         margin-left: 10px;
         font-size: 20px;
@@ -77,4 +60,12 @@ ul {
     background-color: white;
     padding: 16px;
     border-radius: 12px;
+}
+
+.post-num {
+    display: flex;
+}
+
+.bg-white {
+    background-color: white;
 }
