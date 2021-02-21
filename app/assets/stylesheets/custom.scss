@@ -34,8 +34,6 @@ h6 {
 h1 {
   font-size: 3em;
   letter-spacing: -2px;
-  margin-bottom: 30px;
-  text-align: center;
 }
 
 .center {
@@ -137,12 +135,11 @@ input {
 }
 
 .border {
-  color: 1px solid #ddd;
+  border: 1px solid #ddd;
 }
 
 .post-form{
   background-color: white;
-  border: #ddd;
   border-radius: 12px;
   padding: 16px;
 }
