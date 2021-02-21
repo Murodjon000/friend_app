@@ -1,21 +1,21 @@
 <div class='row'>
-  <div class='col-md-3 mt-8 '>
+  <div class='col-md-3 mt-8'>
     <%= render 'shared/user_info' %>
   </div>
-  <div class='col-md-6 mt-8'>
-    <div class = 'post-form'>
+  <div class='col-md-6 mt-8 '>
+    <div class = 'post-form img-rounded border'>
       <%= form_for(@post) do |f| %>
         <%= f.text_area :content, class: 'form-control', placeholder: 'Start Post'%>
         <%= f.submit 'Post', class: 'btn btn-primary' %>
       <% end %>
     </div>
-    <div class="timeline  mb-3">
+    <div class="timeline  mb-3 img-rounded border">
         <div class="posts">
             <%= render @timeline_posts %>
         </div>
     </div>
   </div>
-  <div class='col-md-3 mt-8 friend-box'>
+  <div class='col-md-3 mt-8 friend-box img-rounded border'>
   <p>Follow other users</p>
     
       <%= render 'shared/friend' %>
