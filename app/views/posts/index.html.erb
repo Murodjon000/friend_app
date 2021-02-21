@@ -5,6 +5,7 @@
   <div class='col-md-6 mt-8 '>
     <div class = 'post-form img-rounded border'>
       <%= form_for(@post) do |f| %>
+        <%= f.label :content %>
         <%= f.text_area :content, class: 'form-control', placeholder: 'Start Post'%>
         <%= f.submit 'Post', class: 'btn btn-primary' %>
       <% end %>
