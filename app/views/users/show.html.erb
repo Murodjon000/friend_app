@@ -1,22 +1,46 @@
 <%= provide(:title,@user.name) %>
 
-<div class='list-group'>
-  <div class='list-group-item list-group-item-action flex align-center justify-beetwen'>
-    <div class='flex align-center'>
-    <%= link_to gravatar_for(@user), @user %>
-    <p class='user-name'>
-      <%= link_to @user.name, @user, class: 'font-lg ml-2' %>
-    </p>
+<div class='row'>
+  <div class='col-md-4'>
+  <div class='list-group'>
+  <div class='list-group-item list-group-item-action flex flex-column'>
+    <div class='flex flex-column'>
+       <div class='flex align-center'>
+         <%= link_to gravatar_for(@user), @user %>
+         <p class='user-name'>
+           <%= link_to @user.name, @user, class: 'font-lg ml-2' %>
+         </p>
+       </div>
+       <% if current_user == @user %>
+       <div>
+          <h3>Friends: <%= @mutual_friends.count %></h3>
+          <div>
+          <%= render @mutual_friends %>
+          </div>
+       </div>
+       <% else %>
+       <div>
+          <h3>Pending Friends: <%= @pending_friends.count %></h3>
+          <div>
+          <%= render @pending_friends%>
+          </div>
+        </div>
+       <% end %>
     </div>
     <div>
       <%= render 'users/action', user: @user %>
     </div>
   </div>
 </div>
-
-  <article class="timeline">
+  </div>
+  <div class='col-md-8'>
+  <article class="bg-white p-4 img-rounded border">
     <h3>Recent posts:</h3>
     <ul class="posts">
       <%= render @posts %>
     </ul>
   </article>
+  </div>
+</div>
+
+
