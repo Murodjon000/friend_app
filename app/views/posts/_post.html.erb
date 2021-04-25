@@ -1,5 +1,5 @@
-<div class='row p-4 mb-3'>
-  <div class='flex justify-beetwen'>
+<div class='d-flex flex-column'>
+  <div class='d-flex justify-content-between'>
     <div>
       <%= link_to gravatar_for(post.user,size:40), user_path(post.user), class: 'rounded-circle' %>
       <%= link_to post.user.name, user_path(post.user), class: 'post-user' %>
@@ -10,14 +10,17 @@
     </div>
   </div>
 
-  <p class='post-content'>
+ <div>
+   <p class='post-content'>
     <%= post.content %>
     <hr>
   </p>
 
+ </div>
+
   <div class='mb-3'>
     <%= render partial: 'comments/comments', collection: post.comments %>
-    <div class='comment-form'>
+    <div class=''>
     <%= form_for(post.comments.new, url: post_comments_path(post)) do |f| %>
       <%= f.text_area :content, class: 'form-control', placeholder: 'Add Comment' %>
       <%= f.submit 'Comment', class: 'btn btn-primary' %>
