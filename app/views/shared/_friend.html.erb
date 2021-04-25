@@ -1,7 +1,6 @@
 
-<% if @users.include?(current_user) %>
-<% users = @users.reject { |user| user == current_user } %>
- <% users.each do |user| %>
+
+ <% @users.each do |user| %>
 <div class='list-group'>
     <div class='flex align-center justify-beetwen list-group-item list-group-item-action'>
         <div>
@@ -14,5 +13,4 @@
      
     </div>
 </div>
-<% end %>
 <% end %>
